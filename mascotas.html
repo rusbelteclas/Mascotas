@@ -6,6 +6,45 @@
     <title>LISTA DE MASCOTAS</title>
 </head>
 <body>
-    
+    <script>
+        let mascotas = [
+            "Perro",
+            "Gato",
+            "Conejo"
+        ];
+
+        function contarMascotas() {
+            console.log("Cantidad de mascotas: " + mascotas.length);
+        }
+        
+        function mostrarMascotas() {
+            console.log("Mascotas:", mascotas);
+        }
+        
+        function agregarMascota(mascota) {
+            mascotas.push(mascota);
+            console.log("Mascota " + mascota + " agregada");
+        }
+        
+        function saludar(nombre) {
+            console.log("¡Hola " + nombre + ", bienvenido a la lista de mascotas!");
+        }
+        
+        function main() {
+            let nombre = prompt("Introduce tu nombre:");
+            saludar(nombre);
+            mostrarMascotas();
+            
+            agregarMascota("Tortuga");
+            contarMascotas();
+            mostrarMascotas();
+
+            agregarMascota("Delfin");
+            contarMascotas();
+            mostrarMascotas();
+        }
+        
+        main();
+    </script>
 </body>
 </html>
